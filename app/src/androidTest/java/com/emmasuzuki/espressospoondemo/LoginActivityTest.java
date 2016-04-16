@@ -19,7 +19,7 @@
  */
 package com.emmasuzuki.espressospoondemo;
 
-import android.support.test.rule.ActivityTestRule;
+import android.content.Intent;
 
 import com.squareup.spoon.Spoon;
 
@@ -36,15 +36,18 @@ import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
-public class LoginActivityTest {
+public class LoginActivityTest extends BaseTest {
 
     @Rule
-    public ActivityTestRule<LoginActivity> mActivityTestRule = new ActivityTestRule<>(LoginActivity.class);
+    public SpoonActivityTestRule<LoginActivity> mActivityTestRule = new SpoonActivityTestRule<>(LoginActivity.class, false, false, mSpoonTestWatcher);
+
 
     private LoginActivity mActivity;
 
     @Before
     public void setUp() {
+
+        mActivityTestRule.launchActivity(new Intent());
         mActivity = mActivityTestRule.getActivity();
     }
 
