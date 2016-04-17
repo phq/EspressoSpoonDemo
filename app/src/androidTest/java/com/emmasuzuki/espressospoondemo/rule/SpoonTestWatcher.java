@@ -1,4 +1,4 @@
-package com.emmasuzuki.espressospoondemo;
+package com.emmasuzuki.espressospoondemo.rule;
 
 import android.app.Activity;
 

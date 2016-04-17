@@ -21,6 +21,7 @@ package com.emmasuzuki.espressospoondemo;
 
 import android.content.Intent;
 
+import com.emmasuzuki.espressospoondemo.rule.SpoonActivityTestRule;
 import com.squareup.spoon.Spoon;
 
 import org.junit.Before;
